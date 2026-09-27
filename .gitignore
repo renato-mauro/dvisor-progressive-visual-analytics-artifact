@@ -1,0 +1,16 @@
+node_modules/
+.venv/
+**/__pycache__/
+**/*.py[cod]
+**/.DS_Store
+**/.matplotlib/
+
+# Canonical observations belong in the archival data deposit, not Git.
+phases/01-fixed-order/output/raw/
+phases/01-fixed-order/output/metadata/
+phases/02-order-sensitivity/output/raw/
+phases/02-order-sensitivity/output/metadata/
+phases/02-order-sensitivity/output/datasets/
+
+# Locally generated release bundles.
+release/

@@ -1,0 +1,21 @@
+{
+  "TargetYear": 2018,
+  "CesareanCode": 2,
+  "NumRuns": 10,
+  "NumRuns_actual_by_query": {
+    "Q1": 10,
+    "Q2": 10,
+    "Q3": 10
+  },
+  "HardwareDescription": "Apple M1 (8 logical CPUs, 8.6 GB RAM)",
+  "BrowserDescription": "chromium 149.0.7827.55",
+  "NetworkDescription": "not controlled/measured by this harness — runs were made over whatever network connection the machine had at collection time (see config.runs.cache_policy for the one condition that *is* controlled)",
+  "CachePolicy": "cold (fresh, isolated Playwright browser context per run — no shared HTTP cache, no persisted storage)",
+  "DatasetExactRows": 28789402,
+  "DatasetExactSize": 917760169,
+  "dataset_sha256": "11ed73f53fa129c88d72440f8e0250bcbc1b6cba34955ac0de9805763f892327",
+  "operating_system_sample": "darwin 25.6.0 (arm64)",
+  "node_version_sample": "v21.7.0",
+  "python_version": "3.11.15",
+  "_note": "Generated from actually-collected run metadata/config, not hand-typed. Re-run analysis/resolve_paper_placeholders.py after collecting more runs to refresh. Copy these values into paperdraft.tex's \\newcommand definitions by hand — this script never edits that file."
+}

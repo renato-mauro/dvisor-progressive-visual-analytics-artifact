@@ -1,0 +1,20 @@
+{
+  "expected_measured_runs": 90,
+  "valid_runs": 90,
+  "missing_runs": [],
+  "invalid_runs": [],
+  "final_result_hashes_by_query": {
+    "Q1": [
+      "2146ca26628b052ddd0aa172dd2fce394b10bda7289457f6f0b3db00fcbfd565"
+    ],
+    "Q2": [
+      "aae1a5399786972f0d16ffe85281d589dc9700ee396412648946cd2e62e863a4"
+    ],
+    "Q3": [
+      "0b55b588d9c52c6ba40f1306a603dd827171684d711b77c30fe025a7eaf94c02"
+    ]
+  },
+  "final_result_hash_mismatches": {},
+  "execution_sequence_error": null,
+  "complete": true
+}

@@ -1,0 +1,123 @@
+{
+  "_comment": "Order-sensitivity experiment. The identity-order SINASC file and nine row-group permutations, all produced by the same serialization pipeline, are evaluated with the same Q1-Q3 queries at 1, 2, and 4 worker threads. Phase 1 remains in ../01-fixed-order and is never read or modified here. See PROVENANCE_AUDIT.md for the integrity audit.",
+
+  "experiment_version": "2.0.0-order-sensitivity",
+  "permutation_manifest": "config/SINASC-2012-2021-shuffles.json",
+
+  "datasets": [
+    {
+      "id": "original",
+      "kind": "canonical",
+      "url": "https://storage.googleapis.com/dvisor/SINASC-2012-2021.parquet",
+      "metadata_url": "https://storage.googleapis.com/dvisor/SINASC-2012-2021.meta.json",
+      "seed": null,
+      "manifest_file": null
+    },
+    {
+      "id": "shuf01",
+      "kind": "permuted",
+      "url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf01.parquet",
+      "metadata_url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf01.meta.json",
+      "seed": 3481324050,
+      "manifest_file": "SINASC-2012-2021-shuf01.parquet"
+    },
+    {
+      "id": "shuf02",
+      "kind": "permuted",
+      "url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf02.parquet",
+      "metadata_url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf02.meta.json",
+      "seed": 3481324051,
+      "manifest_file": "SINASC-2012-2021-shuf02.parquet"
+    },
+    {
+      "id": "shuf03",
+      "kind": "permuted",
+      "url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf03.parquet",
+      "metadata_url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf03.meta.json",
+      "seed": 3481324052,
+      "manifest_file": "SINASC-2012-2021-shuf03.parquet"
+    },
+    {
+      "id": "shuf04",
+      "kind": "permuted",
+      "url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf04.parquet",
+      "metadata_url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf04.meta.json",
+      "seed": 3481324053,
+      "manifest_file": "SINASC-2012-2021-shuf04.parquet"
+    },
+    {
+      "id": "shuf05",
+      "kind": "permuted",
+      "url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf05.parquet",
+      "metadata_url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf05.meta.json",
+      "seed": 3481324054,
+      "manifest_file": "SINASC-2012-2021-shuf05.parquet"
+    },
+    {
+      "id": "shuf06",
+      "kind": "permuted",
+      "url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf06.parquet",
+      "metadata_url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf06.meta.json",
+      "seed": 3481324055,
+      "manifest_file": "SINASC-2012-2021-shuf06.parquet"
+    },
+    {
+      "id": "shuf07",
+      "kind": "permuted",
+      "url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf07.parquet",
+      "metadata_url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf07.meta.json",
+      "seed": 3481324056,
+      "manifest_file": "SINASC-2012-2021-shuf07.parquet"
+    },
+    {
+      "id": "shuf08",
+      "kind": "permuted",
+      "url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf08.parquet",
+      "metadata_url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf08.meta.json",
+      "seed": 3481324057,
+      "manifest_file": "SINASC-2012-2021-shuf08.parquet"
+    },
+    {
+      "id": "shuf09",
+      "kind": "permuted",
+      "url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf09.parquet",
+      "metadata_url": "https://storage.googleapis.com/dvisor/sinasc/SINASC-2012-2021-shuf09.meta.json",
+      "seed": 3481324058,
+      "manifest_file": "SINASC-2012-2021-shuf09.parquet"
+    }
+  ],
+
+  "target_year": 2018,
+  "cesarean_code": 2,
+  "dataset_period": {
+    "start_year": 2012,
+    "end_year": 2021
+  },
+  "expected_dataset_rows": 28789402,
+  "expected_row_groups": 270,
+
+  "maternal_age_min": 10,
+  "maternal_age_max": 55,
+
+  "thread_counts": [1, 2, 4],
+  "execution_order_seed": 20260926,
+  "runs": {
+    "warmup_runs": 0,
+    "measured_runs": 1,
+    "cache_policy": "cold (fresh, isolated Playwright browser context per run; no shared browser HTTP cache or persisted storage)",
+    "warmup_rationale": "No warm-up is used because the primary outcomes are quality trajectories over processed-row fraction, not latency. Elapsed time is retained only as contextual metadata."
+  },
+
+  "top_k": 5,
+  "thresholds": {
+    "persistence_k": 3,
+    "nmae_convergence_theta": 0.05,
+    "visual_fidelity_theta": 0.90,
+    "top_k_overlap_relaxed_theta": 0.80,
+    "top_k_overlap_strict_theta": 1.00,
+    "q3_min_ranked_states": 5,
+    "stable_view_theta": 0.99,
+    "domain_coverage_theta": 0.90,
+    "trend_epsilon": 0.001
+  }
+}

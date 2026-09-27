@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the associated article and the archived artifact record."
+title: "Progressive Intermediate-View Fidelity Experiments with DVISOR"
+type: software
+version: 1.0.0
+date-released: 2026-09-26
+doi: 10.5281/zenodo.22983790
+repository-artifact: "https://doi.org/10.5281/zenodo.22983790"
+license: Apache-2.0
+authors:
+  - family-names: Mauro
+    given-names: Renato
+  - family-names: Ogasawara
+    given-names: Eduardo
+  - family-names: Esperanca
+    given-names: Claudio
+preferred-citation:
+  type: article
+  title: "Intermediate-View Fidelity in Progressive Visual Analytics: Task and Order Effects in Public-Health Data"
+  authors:
+    - family-names: Mauro
+      given-names: Renato
+    - family-names: Ogasawara
+      given-names: Eduardo
+    - family-names: Esperanca
+      given-names: Claudio
+  year: 2026

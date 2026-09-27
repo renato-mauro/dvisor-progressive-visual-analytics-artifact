@@ -1,0 +1,50 @@
+{
+  "phase1": {
+    "expected_runs_including_warmups": 33,
+    "missing": [],
+    "invalid": [],
+    "dataset": {
+      "dataset_url": "https://storage.googleapis.com/dvisor/SINASC-2012-2021.parquet",
+      "dataset_bytes": 917760169,
+      "dataset_sha256": "11ed73f53fa129c88d72440f8e0250bcbc1b6cba34955ac0de9805763f892327",
+      "dataset_rows": 28789402,
+      "row_groups": 270,
+      "computed_at": "2026-09-26T21:21:27.867Z"
+    },
+    "final_result_hashes_by_query": {
+      "Q1": [
+        "2146ca26628b052ddd0aa172dd2fce394b10bda7289457f6f0b3db00fcbfd565"
+      ],
+      "Q2": [
+        "aae1a5399786972f0d16ffe85281d589dc9700ee396412648946cd2e62e863a4"
+      ],
+      "Q3": [
+        "0b55b588d9c52c6ba40f1306a603dd827171684d711b77c30fe025a7eaf94c02"
+      ]
+    },
+    "complete": true
+  },
+  "phase2": {
+    "expected_measured_runs": 90,
+    "valid_runs": 90,
+    "missing_runs": [],
+    "invalid_runs": [],
+    "final_result_hashes_by_query": {
+      "Q1": [
+        "2146ca26628b052ddd0aa172dd2fce394b10bda7289457f6f0b3db00fcbfd565"
+      ],
+      "Q2": [
+        "aae1a5399786972f0d16ffe85281d589dc9700ee396412648946cd2e62e863a4"
+      ],
+      "Q3": [
+        "0b55b588d9c52c6ba40f1306a603dd827171684d711b77c30fe025a7eaf94c02"
+      ]
+    },
+    "final_result_hash_mismatches": {},
+    "execution_sequence_error": null,
+    "complete": true
+  },
+  "cross_phase_final_results_match": true,
+  "shared_identity_dataset_matches_expected": true,
+  "complete": true
+}

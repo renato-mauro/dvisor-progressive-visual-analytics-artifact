@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8" /><title>dvisor convergence experiment harness</title></head>
+<body>
+<script type="module">
+import { Dvisor } from './vendor/dvisor-web-lib/index.js';
+
+let dvisor = null;
+let cachedTc = null;
+
+function getDvisor(tc) {
+    if (!dvisor || cachedTc !== tc) {
+        dvisor = new Dvisor(tc);
+        cachedTc = tc;
+    }
+    return dvisor;
+}
+
+// Runs `sql` progressively and reports each frame to Node via the
+// window.__onFrame binding (installed by run_experiment.mjs through
+// page.exposeFunction before this script ever runs). window.__onDone /
+// window.__onError report completion.
+//
+// IMPORTANT — the same correctness hazard documented in dvisor-site's
+// sinasc-explorer/js/runner.js applies here: dvisor's incremental merge
+// mutates group objects from earlier snapshots in place when a later
+// fragment combines into a matching group (see mergeAggregate/comb in
+// dvisor-web-lib/src/client/index.js). A stored/reported snapshot MUST be
+// shallow-cloned the instant it's received, or a "past" frame would
+// silently drift to the final values once combined further — this file is
+// intentionally self-contained (no import from dvisor-site) so it doesn't
+// depend on that module, but it must reproduce this exact fix.
+window.__runQuery = async function (sql, tc) {
+    const d = getDvisor(tc);
+    const iterator = d.execSql(sql);
+    let frameIndex = 0;
+    try {
+        for await (const chunk of iterator) {
+            frameIndex++;
+            const rows = chunk.map((r) => ({ ...r }));
+            await window.__onFrame(frameIndex, rows);
+        }
+        await window.__onDone();
+    } catch (err) {
+        await window.__onError(String(err && err.message ? err.message : err));
+    }
+};
+</script>
+</body>
+</html>

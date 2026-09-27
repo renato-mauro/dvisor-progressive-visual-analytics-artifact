@@ -1,0 +1,37 @@
+{
+  "_comment": "Phase-1 recollection using the serialization-controlled identity-order Parquet also used as the control in the order-sensitivity phase. The query definitions, four-worker policy, one warm-up, and ten measured runs per query are unchanged from the initial protocol.",
+
+  "experiment_version": "1.1.0-reserialized-identity",
+  "dataset_url": "https://storage.googleapis.com/dvisor/SINASC-2012-2021.parquet",
+
+  "target_year": 2018,
+  "cesarean_code": 2,
+
+  "dataset_period": {
+    "start_year": 2012,
+    "end_year": 2021
+  },
+
+  "maternal_age_min": 10,
+  "maternal_age_max": 55,
+
+  "threads": 4,
+
+  "runs": {
+    "warmup_runs": 1,
+    "measured_runs": 10,
+    "cache_policy": "cold (fresh, isolated Playwright browser context per run — no shared HTTP cache, no persisted storage)"
+  },
+
+  "top_k": 5,
+
+  "thresholds": {
+    "_comment": "theta (fidelity/stability threshold), k (persistence length in consecutive frames), matching eq:stable-run in the paper.",
+    "persistence_k": 3,
+    "nmae_convergence_theta": 0.05,
+    "visual_fidelity_theta": 0.90,
+    "stable_view_theta": 0.99,
+    "domain_coverage_theta": 0.90,
+    "trend_epsilon": 0.001
+  }
+}
