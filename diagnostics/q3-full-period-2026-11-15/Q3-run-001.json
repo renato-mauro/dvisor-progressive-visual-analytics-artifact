@@ -1,0 +1,23 @@
+{
+  "run_id": "Q3-run-001",
+  "query_id": "Q3",
+  "is_warmup": false,
+  "experiment_version": "1.0.0",
+  "dataset_url": "https://storage.googleapis.com/dvisor/SINASC-2012-2021.parquet",
+  "target_year": 2018,
+  "cesarean_code": 2,
+  "threads": 4,
+  "sql": "SELECT\n    floor(CODMUNRES/10000) AS state,\n    SUM(iif(PARTO = 2, 1, 0)) AS cesarean_births,\n    COUNT(*) AS total_births\nFROM 'https://storage.googleapis.com/dvisor/SINASC-2012-2021.parquet'\nGROUP BY 1",
+  "browser_name": "chromium",
+  "browser_version": "153.0.8010.12",
+  "operating_system": "darwin 25.6.0 (arm64)",
+  "cpu_model": "Apple M1",
+  "cpu_count": 8,
+  "total_memory_bytes": 8589934592,
+  "node_version": "v21.7.0",
+  "total_elapsed_ms": 40504,
+  "total_fragments": 270,
+  "total_transferred_bytes": 54621033,
+  "total_request_count": 552,
+  "timestamp": "2026-11-15T20:38:57.645Z"
+}

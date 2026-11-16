@@ -1,0 +1,18 @@
+DVISOR Progressive Intermediate-View Experimental Artifact
+Copyright 2026 Renato Mauro, Eduardo Ogasawara, and Claudio Esperança
+
+The software portions of this artifact are licensed under the Apache License,
+Version 2.0. The research data, experimental observations, figures, reports,
+and documentation are not covered by the Apache License; see
+LICENSE-DATA.md.
+
+The underlying public-health records originate from the Sistema de
+Informações sobre Nascidos Vivos (SINASC), Brazilian Ministry of Health, and
+are disseminated by DATASUS. The official dataset record declares the source
+license as Creative Commons Attribution (cc-by). See
+DATASUS-ATTRIBUTION.md. Neither DATASUS nor the Brazilian Ministry of Health
+endorses this derived artifact or its interpretations.
+
+Playwright is an external runtime dependency distributed under the Apache
+License 2.0 by Microsoft Corporation. It is installed separately and is not
+vendored in this repository.

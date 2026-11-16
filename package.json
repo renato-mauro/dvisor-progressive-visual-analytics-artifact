@@ -1,0 +1,19 @@
+{
+  "name": "dvisor-progressive-visual-analytics-artifact",
+  "version": "1.0.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "description": "Integrated artifact for fixed-order and order-sensitivity experiments on progressive intermediate views.",
+  "scripts": {
+    "collect:phase1": "node phases/01-fixed-order/harness/run_experiment.mjs",
+    "plan:phase2": "node phases/02-order-sensitivity/harness/run_experiment.mjs --list-plan",
+    "preflight:phase2": "node phases/02-order-sensitivity/harness/run_experiment.mjs --preflight-only",
+    "collect:phase2": "node phases/02-order-sensitivity/harness/run_experiment.mjs",
+    "validate": "python scripts/validate_artifact.py",
+    "analyze": "python scripts/build_all.py"
+  },
+  "dependencies": {
+    "playwright": "1.61.1"
+  }
+}

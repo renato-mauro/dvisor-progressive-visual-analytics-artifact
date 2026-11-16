@@ -1,0 +1,207 @@
+{
+  "cross_engine": {
+    "Q1": {
+      "groups": 12,
+      "executions": 40,
+      "identical_to_duckdb": 40
+    },
+    "Q2": {
+      "groups": 60,
+      "executions": 40,
+      "identical_to_duckdb": 40
+    },
+    "Q3": {
+      "groups": 27,
+      "executions": 40,
+      "identical_to_duckdb": 40
+    }
+  },
+  "one_worker_replay": {
+    "Q1": {
+      "original": {
+        "frames": 27,
+        "simulated_frames": 27,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf01": {
+        "frames": 27,
+        "simulated_frames": 27,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf02": {
+        "frames": 27,
+        "simulated_frames": 27,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf03": {
+        "frames": 27,
+        "simulated_frames": 27,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf04": {
+        "frames": 27,
+        "simulated_frames": 27,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf05": {
+        "frames": 27,
+        "simulated_frames": 27,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf06": {
+        "frames": 27,
+        "simulated_frames": 27,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf07": {
+        "frames": 27,
+        "simulated_frames": 27,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf08": {
+        "frames": 27,
+        "simulated_frames": 27,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf09": {
+        "frames": 27,
+        "simulated_frames": 27,
+        "same_length": true,
+        "mismatching_frames": 0
+      }
+    },
+    "Q2": {
+      "original": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf01": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf02": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf03": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf04": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf05": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf06": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf07": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf08": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf09": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      }
+    },
+    "Q3": {
+      "original": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf01": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf02": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf03": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf04": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf05": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf06": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf07": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf08": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      },
+      "shuf09": {
+        "frames": 270,
+        "simulated_frames": 270,
+        "same_length": true,
+        "mismatching_frames": 0
+      }
+    }
+  }
+}
