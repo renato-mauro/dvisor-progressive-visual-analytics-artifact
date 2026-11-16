@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1459909832.svg)](https://doi.org/10.5281/zenodo.24279709)
+
 # Progressive intermediate-view experiments with DVISOR
 
 ## TL;DR
